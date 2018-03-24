@@ -9,6 +9,7 @@ class UserController extends Controller
 
     public function getLogin(){
         if (Auth::viaRemember()) {
+            echo 'OK';
             return redirect('admin/dashboard');
         }
         else{

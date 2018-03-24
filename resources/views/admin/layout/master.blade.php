@@ -27,7 +27,7 @@
 <script src="admin/dist/js/sb-admin-2.js"></script>
 
 <!-- DataTables JavaScript -->
-<script src="admin/bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
+<script src="admin/bower_components/dataTables/media/js/jquery.dataTables.min.js"></script>
 <script src="admin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
 <!-- DatePicker Boostrap JavaScript -->
