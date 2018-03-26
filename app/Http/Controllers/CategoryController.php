@@ -41,7 +41,7 @@ class CategoryController extends Controller
         $category = new Category();
         $category->name = $request->name;
         $image = $request->file('image');
-        $img_name = time().$image->getClientOriginalName();
+        $img_name = time()."_".$image->getClientOriginalName();
         $category->image = $img_name;
         $image->move('upload/images/img_category',$img_name);
         $category->alias = str_slug($request->name,'-');
@@ -101,7 +101,7 @@ class CategoryController extends Controller
         if($request->hasFile('image')){
             unlink('upload/images/img_category/'.$category->image);
             $image = $request->file('image');
-            $img_name = time().$image->getClientOriginalName();
+            $img_name = time()."_".$image->getClientOriginalName();
             $category->image = $img_name;
             $image->move('upload/images/img_category',$img_name);
         }
@@ -120,7 +120,7 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $category = Category::find($id);
-            unlink('upload/images/img_category/'.$category->image);
+        unlink('upload/images/img_category/'.$category->image);
         $category->delete();
         return redirect()->route('category.index')->with(['success'=>'Delete successfully !']);
     }
