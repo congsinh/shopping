@@ -125,108 +125,108 @@ $('document').ready(function(){
 	});
 
 
-	<!-- index3 main Carousal-->
-	$(function() {
-				$('#mainslider3').carouFredSel({
-					responsive: true,
-					auto: true,
-				//	width: 1170,
-					height: '100%',
-					direction: 'left',
-					items: 1,
-					swipe: {
-							onMouse: true,
-							onTouch: true
-						},
-					scroll: {
-						duration: 1000,
-						onBefore: function( data ) {
-							data.items.visible.children().css( 'opacity', 0 ).delay( 200 ).fadeTo( 400, 1 );
-							data.items.old.children().fadeTo( 400, 0 );
-						}
-					}
-				});
-			});
+	// <!-- index3 main Carousal-->
+	// $(function() {
+	// 			$('#mainslider3').carouFredSel({
+	// 				responsive: true,
+	// 				auto: true,
+	// 			//	width: 1170,
+	// 				height: '100%',
+	// 				direction: 'left',
+	// 				items: 1,
+	// 				swipe: {
+	// 						onMouse: true,
+	// 						onTouch: true
+	// 					},
+	// 				scroll: {
+	// 					duration: 1000,
+	// 					onBefore: function( data ) {
+	// 						data.items.visible.children().css( 'opacity', 0 ).delay( 200 ).fadeTo( 400, 1 );
+	// 						data.items.old.children().fadeTo( 400, 0 );
+	// 					}
+	// 				}
+	// 			});
+	// 		});
 
 
-	<!-- index4 main Carousal-->
-	$(window).load(function() {
-              // The slider being synced must be initialized first
-              $('#carouseindex4').flexslider({
-                animation: "slide",
-                controlNav: false,
-                animationLoop: false,
-                slideshow: false,
-                itemWidth: 226,
-                //itemMargin: 15,
-                asNavFor: '#sliderindex4'
-              });
-              
-              $('#sliderindex4').flexslider({
-                animation: "slide",
-                controlNav: false,
-                animationLoop: false,
-                slideshow: false,
-                sync: "#carouseindex4"
-              });
-            });
-			
-	<!-- index5 main Carousal-->		
-			function prevTimers() {
-				return allTimers().slice( 0, $('.sliderindex5pager a.selected').index() );
-			}
-			function allTimers() {
-				return $('.sliderindex5pager a span');
-			}
-
-			$(function() {
-				$('#sliderindex5').carouFredSel({
-					items: 1,
-					responsive : true,
-					auto: {
-						pauseOnHover: 'resume',
-						progress: {
-							bar: '.sliderindex5pager a:first span'
-						}
-					},
-					scroll: {
-						fx: 'crossfade',
-						duration: 300,
-						timeoutDuration: 2000,
-						onAfter: function() {
-							allTimers().stop().width( 0 );
-						//	prevTimers().width(  );
-							$(this).trigger('configuration', [ 'auto.progress.bar', '.sliderindex5pager a.selected span' ]);
-						}
-					},
-					pagination: {
-						container: '.sliderindex5pager',
-						anchorBuilder: false
-					}
-				});
-			});
-			
-			<!-- index6 main Carousal-->
-	$(function() {
-				$('#mainslider6').carouFredSel({
-					//width: 900,
-					//height: '100%',
-					direction: 'up',
-					items: 1,
-					prev: '#prevmainslider6',
-					next: '#nextmainslider6',
-					pagination: "#pagermainslider6",
-					mousewheel: true,
-					swipe: {
-						onMouse: true,
-						onTouch: true
-					}
-					
-					
-				});
-				
-			});
-			
+	// <!-- index4 main Carousal-->
+	// $(window).load(function() {
+     //          // The slider being synced must be initialized first
+     //          $('#carouseindex4').flexslider({
+     //            animation: "slide",
+     //            controlNav: false,
+     //            animationLoop: false,
+     //            slideshow: false,
+     //            itemWidth: 226,
+     //            //itemMargin: 15,
+     //            asNavFor: '#sliderindex4'
+     //          });
+     //
+     //          $('#sliderindex4').flexslider({
+     //            animation: "slide",
+     //            controlNav: false,
+     //            animationLoop: false,
+     //            slideshow: false,
+     //            sync: "#carouseindex4"
+     //          });
+     //        });
+	//
+	// <!-- index5 main Carousal-->
+	// 		function prevTimers() {
+	// 			return allTimers().slice( 0, $('.sliderindex5pager a.selected').index() );
+	// 		}
+	// 		function allTimers() {
+	// 			return $('.sliderindex5pager a span');
+	// 		}
+    //
+	// 		$(function() {
+	// 			$('#sliderindex5').carouFredSel({
+	// 				items: 1,
+	// 				responsive : true,
+	// 				auto: {
+	// 					pauseOnHover: 'resume',
+	// 					progress: {
+	// 						bar: '.sliderindex5pager a:first span'
+	// 					}
+	// 				},
+	// 				scroll: {
+	// 					fx: 'crossfade',
+	// 					duration: 300,
+	// 					timeoutDuration: 2000,
+	// 					onAfter: function() {
+	// 						allTimers().stop().width( 0 );
+	// 					//	prevTimers().width(  );
+	// 						$(this).trigger('configuration', [ 'auto.progress.bar', '.sliderindex5pager a.selected span' ]);
+	// 					}
+	// 				},
+	// 				pagination: {
+	// 					container: '.sliderindex5pager',
+	// 					anchorBuilder: false
+	// 				}
+	// 			});
+	// 		});
+	//
+	// 		<!-- index6 main Carousal-->
+	// $(function() {
+	// 			$('#mainslider6').carouFredSel({
+	// 				//width: 900,
+	// 				//height: '100%',
+	// 				direction: 'up',
+	// 				items: 1,
+	// 				prev: '#prevmainslider6',
+	// 				next: '#nextmainslider6',
+	// 				pagination: "#pagermainslider6",
+	// 				mousewheel: true,
+	// 				swipe: {
+	// 					onMouse: true,
+	// 					onTouch: true
+	// 				}
+	//
+	//
+	// 			});
+	//
+	// 		});
+	//
 			
 				// Brand Carousal
 	$(window).load(function() {
@@ -247,7 +247,7 @@ $('document').ready(function(){
     $('#category').slick({
         infinite: false,
         speed: 600,
-        slidesToShow: 10,
+        slidesToShow: 8,
         slidesToScroll: 4,
         responsive: [
             {
